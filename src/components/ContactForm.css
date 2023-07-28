@@ -1,0 +1,62 @@
+.inner.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contact-form {
+  background-color: #fffefe;
+  padding: 20px;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0);
+  cursor: pointer;
+  position: relative;
+  perspective: 800px;
+  overflow: hidden;
+}
+
+.contact-form:hover {
+  transform: rotateY(10deg);
+}
+
+.contact-form form {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-form .form-btn {
+  background: linear-gradient(45deg, #05f5a9, #61e3e3);
+  color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-form .form-btn:hover {
+  transform: scale(1.1);
+}
+
+.contact-form .mail-message-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form .mail-message {
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.contact-form .mail-message strong {
+  font-weight: bold;
+}
+
+.contact-form .not-visible-message {
+  display: none;
+}

@@ -1,0 +1,110 @@
+.bus-seat-booking-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .bus-seat-booking-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .seat-layout {
+    display: grid;
+    grid-template-columns: repeat(5, 40px); /* 5 columns of 40px each */
+    gap: 5px;
+    justify-content: center;
+    margin-top: 10px; /* Adjust top margin for better alignment */
+  }
+  
+  .seat {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50%; /* Create a circular shape */
+    cursor: pointer;
+    position: relative;
+    color: #333;
+    user-select: none; /* Prevent seat numbers from being selected */
+  }
+  
+  /* Seat background styles */
+  .seat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit; /* Inherit the border radius from .seat */
+    transition: background-color 0.2s;
+  }
+  
+  .available::before {
+    background-color: #5cdb95; /* Light Green */
+  }
+  
+  .booked::before {
+    background-color: #ff6b6b; /* Red */
+  }
+  
+  /* Hover styles */
+  .seat:hover::before {
+    background-color: #add8e6; /* Light Blue */
+  }
+  
+  .seat:not(.booked):hover::before {
+    background-color: #59a9ff; /* Blue */
+  }
+  
+  /* Styling to adjust the seat arrangement */
+  .seat:nth-child(5n + 1) {
+    margin-right: 0;
+  }
+  
+  .seat:nth-child(n + 6) {
+    margin-right: 5px;
+  }
+  
+  .seat:nth-child(n + 16) {
+    margin-right: 0;
+  }
+  
+  .seat:nth-child(n + 11) {
+    margin-right: 5px;
+  }
+  
+  .seat:nth-child(n + 16) {
+    margin-top: 5px;
+  }
+  
+  .book-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .book-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ff6b6b; /* Red */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .book-button:hover {
+    background-color: #ff4f4f; /* Darker Red */
+  }
+  
